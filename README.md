@@ -1,6 +1,6 @@
 # About Project
 
-- Poor Ielts is builded for Front end
+- It was builed for bfast can check ref
 - Signed by Khainb
 
 ## Technologies Used
@@ -32,8 +32,8 @@
 To clone project based on using `nextui-cli`, run the following command:
 
 ```bash
-git clone git@github.com:batkhai290499/poor-ielts.git
-cd poor-ielts
+git clone git@github.com:batkhai290499/b-fast-test.git
+cd b-fast-test
 bun install
 ```
 
