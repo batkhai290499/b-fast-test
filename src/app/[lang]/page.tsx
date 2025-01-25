@@ -2,6 +2,7 @@ import { Suspense } from "react";
 
 import { BlockOne } from "@/section/BlockOne";
 import { BlockTwo } from "@/section/BlockTwo";
+import { BlockThree } from "@/section/BlockThree";
 
 async function fetchDataLang(lang: string) {
   try {
@@ -20,17 +21,17 @@ type paramsType = Promise<{ lang: string }>;
 
 export default async function MindMapPage({ params }: { params: paramsType }) {
   const { lang } = await params;
-  // const { setData } = useStore();
 
   const response = await fetchDataLang(lang);
 
-  // setData(response);
+  console.log(response);
 
   return (
     <Suspense fallback={<div>Loading mind map...</div>}>
       <div className="flex flex-col gap-4 justify-center items-center">
         <BlockOne lang={response?.data[0].bloc_1} />
-        <BlockTwo />
+        <BlockTwo lang={response?.data[0].bloc_2} />
+        <BlockThree />
       </div>
     </Suspense>
   );

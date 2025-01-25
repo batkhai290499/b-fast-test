@@ -30,11 +30,10 @@ import { siteConfig } from "@/config/site";
 
 const SelectLanguageOption = () => {
   const router = useRouter();
-  const [value, setValue] = useState<any>("");
+  const [value, setValue] = useState<any>("en");
 
   const changeLanguage = (e: any) => {
     setValue(e.target.value);
-
     router.push(`/${e.target.value}`);
   };
   const CountrySupport = [
@@ -56,9 +55,7 @@ const SelectLanguageOption = () => {
     <>
       <Select
         className="max-w-[160px]"
-        defaultSelectedKeys={["en"]}
         label="Language"
-        placeholder="Select an animal"
         selectedKeys={value}
         variant="bordered"
         onChange={changeLanguage}
